@@ -6,7 +6,7 @@
 .keras/
 .local/
 .rstudio/
-docker/
+docker/run-gsutil.sh
 phenology-targets.csv.gz
 rstudio/
 output/
