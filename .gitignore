@@ -1,3 +1,16 @@
+# Misc local dev folders and files
+.DS_Store
+.bash_history
+.cache/
+.config/
+.keras/
+.local/
+.rstudio/
+docker/
+phenology-targets.csv.gz
+rstudio/
+output/
+
 # History files
 .Rhistory
 .Rapp.history
