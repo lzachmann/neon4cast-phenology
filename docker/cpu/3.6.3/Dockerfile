@@ -36,8 +36,15 @@ RUN pip3 install \
 USER root
 RUN install2.r reticulate tensorflow keras
 
+# Install ncdf4 package.
+RUN apt-get update && apt-get install -y libnetcdf-dev && \
+    wget http://cirrus.ucsd.edu/~pierce/ncdf/ncdf4_1.13.tar.gz && \
+    R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/usr/bin/nc-config" && \
+    rm ncdf4_1.13.tar.gz
+
 ## greta and other greenwave dependencies
 RUN install2.r --error \
+    aws.s3 \
     abind \
     moments \
     mvtnorm \

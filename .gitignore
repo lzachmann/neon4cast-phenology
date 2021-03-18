@@ -1,4 +1,5 @@
 # Misc local dev folders and files
+data/
 .DS_Store
 .bash_history
 .cache/
